@@ -1,0 +1,16 @@
+- name: version
+  service: terraform
+  command: version
+- name: init
+  service: terraform
+  command: init --input=false ./terraform/Base
+- name: validate
+  service: terraform
+  command: validate ./terraform/Base
+- name: plan
+  service: terraform
+  command: plan --input=false --out=./terraform/codeship.tfplan ./terraform/Base
+- name: apply
+  tag: release-apply
+  service: terraform
+  command: apply --input=false ./terraform/codeship.tfplan ./terraform/Base
