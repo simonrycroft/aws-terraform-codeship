@@ -13,5 +13,4 @@
 - name: apply
   tag: release-apply
   service: terraform
-  command: apply --input=false ./terraform/codeship.tfplan ./terraform/Base
-
+  command: apply --input=false ./terraform/codeship.tfplan
