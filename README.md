@@ -6,6 +6,8 @@ Get a Node app hosted on AWS
 
 * Hosted in Docker containers in ECS
 * Backs onto a MySQL database
+* Remote state stored in S3
+* State locking
 * Provides an endpoint that exposes some data extracted from the DB
 * Load balanced app instances across mutliple availability zones
 * Load balanced DB cluster
