@@ -4,6 +4,3 @@ terraform:
   volumes:
     - ./:/terraform
   encrypted_env_file: secrets.env.encrypted
-  environment:
-    AWS_ACCESS_KEY_ID: ${TF_VAR_aws_access_key_id}
-    AWS_SECRET_ACCESS_KEY: ${TF_VAR_aws_secret_access_key}
