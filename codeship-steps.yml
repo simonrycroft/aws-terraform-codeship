@@ -1,5 +1,6 @@
 - name: debug
-  command: echo $TF_VAR_aws_access_key_id
+  service: echo
+  command: $TF_VAR_aws_access_key_id
 - name: version
   service: terraform
   command: version
