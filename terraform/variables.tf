@@ -30,7 +30,7 @@ variable "ecs_autoscale_role" {
 
 variable "ecs_task_execution_role" {
   description = "Role arn for the ecsTaskExecutionRole"
-  default     = "arn:aws:iam::aws:policy/service-role/AmazonECSTaskExecutionRolePolicy"
+  default     = "arn:aws:iam::067411311679:role/ecsTaskExecutionRole"
 }
 
 variable "health_check_path" {
