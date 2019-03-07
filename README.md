@@ -17,6 +17,13 @@ Get a Node app hosted on AWS
 * No hard coded config
 * Auto-provisioned by Codeship on merge into release branch
 
+## TODO
+
+* Host my own Node app
+* Create my own docker image and store it in ECR
+* Set up RDS cluster across availability zones
+* Edge with cloudfront
+
 ## Notes
 
 ### Remote State
