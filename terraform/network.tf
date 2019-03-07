@@ -17,7 +17,7 @@ resource "aws_subnet" "private" {
   vpc_id            = "${aws_vpc.main.id}"
 
   tags = {
-    Name = "Private Subnets"
+    Name = "Private Subnet"
   }
 }
 
@@ -30,7 +30,7 @@ resource "aws_subnet" "public" {
   map_public_ip_on_launch = true
 
   tags = {
-    Name = "Public Subnets"
+    Name = "Public Subnet"
   }
 }
 
@@ -41,4 +41,11 @@ resource "aws_internet_gateway" "gw" {
   tags = {
     Name = "Main Internet Gateway"
   }
+}
+
+# Route the public subnet trafic through the IGW
+resource "aws_route" "internet_access" {
+  route_table_id         = "${aws_vpc.main.main_route_table_id}"
+  destination_cidr_block = "0.0.0.0/0"
+  gateway_id             = "${aws_internet_gateway.gw.id}"
 }
