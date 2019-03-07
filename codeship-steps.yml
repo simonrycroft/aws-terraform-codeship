@@ -19,4 +19,4 @@
   steps:
     - name: approve-destroy
       service: terraform
-      command: destroy --auto-approve --input=false ./terraform
+      command: destroy -force ./terraform
