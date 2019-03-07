@@ -1,3 +1,9 @@
+# Encrypted AWS credentials
 codeship.aes
 
-terraform/.terraform
+# Compiled files
+*.tfstate
+*.tfstate.backup
+.terraform.tfstate.lock.info
+# Module directory
+.terraform/
