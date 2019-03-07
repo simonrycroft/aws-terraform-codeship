@@ -3,15 +3,15 @@
   command: version
 - name: init
   service: terraform
-  command: init --input=false ./terraform/Base
+  command: init --input=false ./terraform
 - name: validate
   service: terraform
-  command: validate ./terraform/Base
+  command: validate ./terraform
 - name: plan
-  tag: release
+  tag: release-plan
   service: terraform
-  command: plan --input=false --out=./terraform/codeship.tfplan ./terraform/Base
+  command: plan --input=false --out=./terraform/codeship.tfplan ./terraform
 - name: apply
-  tag: release-apply
+  tag: release
   service: terraform
   command: apply --input=false ./terraform/codeship.tfplan
