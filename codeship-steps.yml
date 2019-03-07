@@ -8,9 +8,10 @@
   service: terraform
   command: validate ./terraform/Base
 - name: plan
+  tag: release-plan
   service: terraform
   command: plan --input=false --out=./terraform/codeship.tfplan ./terraform/Base
 - name: apply
-  tag: release-apply
+  tag: release
   service: terraform
   command: apply --input=false ./terraform/codeship.tfplan
