@@ -15,3 +15,9 @@
   tag: release
   service: terraform
   command: apply --input=false ./terraform/codeship.tfplan
+- type: manual
+  tag: release
+  steps:
+    - name: approve-destroy
+      service: terraform
+      command: destroy ./terraform
