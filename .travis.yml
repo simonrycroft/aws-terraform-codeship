@@ -8,6 +8,6 @@ before_install:
   - rm -f terraform.zip
 
 script:
-  - ./terraform init ./terraform
-  - ./terraform plan ./terraform
+  - terraform init ./terraform
+  - terraform plan ./terraform
 
