@@ -8,3 +8,4 @@ before_install:
 script:
 	- ./terraform init ./terraform
 	- ./terraform plan ./terraform
+
