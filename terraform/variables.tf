@@ -25,7 +25,7 @@ variable "app_count" {
 
 variable "ecs_autoscale_role" {
   description = "Role arn for the ecsAutocaleRole"
-  default     = "arn:aws:iam::aws:policy/service-role/AmazonEC2ContainerServiceAutoscaleRole"
+  default     = "arn:aws:iam::067411311679:role/aws-service-role/ecs.amazonaws.com/AWSServiceRoleForECS"
 }
 
 variable "ecs_task_execution_role" {
